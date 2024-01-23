@@ -1,0 +1,104 @@
+/* All Page */
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+/* Body */
+body {
+    width: 80%;
+    height: 80vh;
+    background-color: #000;
+}
+/* Logo */
+img.logo {
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    /* border: 1px solid #28a9e2; */
+}
+/* Container */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; */
+}
+/* Progress Bar */
+.progress-bar {
+    position: relative;
+    width: 500px;
+    height: 4em;
+    background-color: #262626;
+    border-radius: 1.4em;
+    color: #ffd700;
+    border: 1px solid #28a9e2;
+}
+/* Progress Bar Before */
+.progress-bar::before {
+    content: attr(data-label);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    bottom: 0.5em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(100% - 1em);
+    background-color: #28a9e2;
+    border-radius: 1.2em;
+    padding: 1em;
+}
+/* Donate Link */
+body a.donate {
+    text-decoration: none;
+    color: #ffd700;
+    font-weight: 700;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ffd700;
+    border-radius: 10px;
+    padding: 10px 35px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+/* Donate Link Hover */
+body a.donate:hover {
+    filter: drop-shadow(0 0 8px #28a9e2);
+    border: 1px solid #28a9e2;
+    color: #28a9e2;
+}
+/* Body Hover Donate Link */
+body:hover a.donate {
+    opacity: 1;
+    transition: 5s ease-in-out;
+}
+/* Refresh Button */
+body button {
+    color: #28a9e2;
+    font-weight: 700;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 1px solid #28a9e2;
+    border-radius: 10px;
+    padding: 10px 35px;
+    cursor: pointer;
+}
